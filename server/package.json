@@ -1,0 +1,13 @@
+{
+  "name": "bradly-server",
+  "version": "2.0.0",
+  "main": "index.js",
+  "scripts": { "start": "node index.js" },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
+    "cors": "^2.8.5",
+    "bcryptjs": "^2.4.3",
+    "uuid": "^9.0.1"
+  }
+}

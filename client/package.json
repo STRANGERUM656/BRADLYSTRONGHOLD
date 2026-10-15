@@ -1,0 +1,47 @@
+{
+  "name": "bradly-client",
+  "version": "2.0.0",
+  "main": "electron.js",
+  "description": "BradlyStronghold",
+  "author": "STRANGERUM656",
+  "scripts": {
+    "postinstall": "electron-builder install-app-deps",
+    "build": "vite build",
+    "dist": "electron-builder --win portable"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "socket.io-client": "^4.7.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "electron": "22.3.27",
+    "electron-builder": "24.13.3",
+    "vite": "^5.4.0"
+  },
+  "build": {
+    "appId": "com.bradlystronghold.app",
+    "productName": "BradlyStronghold",
+    "asar": false,
+    "win": { "target": "portable", "sign": null },
+    "portable": { "artifactName": "BradlyStronghold.exe" },
+    "directories": { "output": "release" },
+    "files": [
+      "dist/**/*",
+      "electron.js",
+      "preload.js",
+      "package.json"
+    ],
+    "extraResources": [
+      { "from": "dist", "to": "dist" }
+    ],
+    "extraFiles": [
+      { "from": "node_modules/electron/dist/vcruntime140.dll", "to": "." },
+      { "from": "node_modules/electron/dist/vcruntime140_1.dll", "to": "." },
+      { "from": "node_modules/electron/dist/msvcp140.dll", "to": "." },
+      { "from": "node_modules/electron/dist/msvcp140_1.dll", "to": "." },
+      { "from": "node_modules/electron/dist/msvcp140_2.dll", "to": "." }
+    ]
+  }
+}
