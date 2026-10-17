@@ -2,19 +2,47 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>BradlyStronghold</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BradlyStronghold - Piattaforma Multiplayer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@500;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { background-color: #0d0d0d; color: #fff; font-family: 'Montserrat', sans-serif; text-align: center; padding-top: 100px; background-image: linear-gradient(rgba(13,13,13,0.7), rgba(13,13,13,1)), url('https://images.unsplash.com/photo-1533152760838-57372754d793'); background-size: cover;}
-        h1 { font-family: 'Cinzel', serif; font-size: 5rem; color: #e6c27a; margin-bottom: 10px;}
-        p { font-style: italic; color: #e6c27a; margin-bottom: 40px;}
-        .btn { padding: 15px 40px; border: 1px solid #b8934a; background: #141414; color: #e6c27a; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block;}
-        .btn:hover { box-shadow: 0 0 15px #e6c27a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #0d0d0d; color: #fff; font-family: 'Montserrat', sans-serif; background-image: linear-gradient(to bottom, rgba(13,13,13,0.7) 0%, rgba(13,13,13,1) 100%), url('https://images.unsplash.com/photo-1533152760838-57372754d793?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center top; background-attachment: fixed; min-height: 100vh; }
+        :root { --oro: #e6c27a; --oro-scuro: #b8934a; --oro-glow: rgba(230, 194, 122, 0.4); }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; border-bottom: 1px solid rgba(230, 194, 122, 0.2); background: rgba(13, 13, 13, 0.8); backdrop-filter: blur(5px); position: fixed; width: 100%; top: 0; z-index: 100; }
+        .logo { display: flex; align-items: center; gap: 10px; font-family: 'Cinzel', serif; font-size: 1.2rem; color: var(--oro); }
+        nav ul { list-style: none; display: flex; gap: 30px; }
+        nav a { text-decoration: none; color: #a0a0a0; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; transition: color 0.3s; }
+        nav a:hover { color: var(--oro); }
+        .hero { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 180px 20px 100px; }
+        .hero h1 { font-family: 'Cinzel', serif; font-size: 5rem; color: var(--oro); text-transform: uppercase; letter-spacing: 5px; text-shadow: 0 0 20px var(--oro-glow); }
+        .subtitle { font-family: 'Playfair Display', serif; font-style: italic; color: var(--oro); font-size: 1.5rem; margin-bottom: 40px; }
+        .badges { display: flex; gap: 15px; margin-bottom: 50px; }
+        .badge { border: 1px solid rgba(230, 194, 122, 0.5); padding: 8px 20px; border-radius: 30px; font-size: 0.75rem; color: var(--oro); background: rgba(0, 0, 0, 0.4); }
+        .buttons { display: flex; gap: 20px; }
+        .btn { display: flex; flex-direction: column; align-items: center; padding: 15px 40px; text-decoration: none; border-radius: 5px; border: 1px solid var(--oro-scuro); background: rgba(20, 20, 20, 0.8); color: var(--oro); cursor: pointer; transition: 0.3s; }
+        .btn:hover { box-shadow: 0 0 15px var(--oro-glow); border-color: var(--oro); }
+        .btn-primary { font-size: 1.2rem; font-weight: 700; }
+        .btn-primary span { font-size: 0.65rem; color: #a0a0a0; margin-top: 5px; }
+        .features-section { text-align: center; padding: 100px 20px; background: linear-gradient(to top, #0d0d0d 0%, rgba(13,13,13,0.8) 100%); }
+        .features-section h2 { font-family: 'Cinzel', serif; font-size: 3.5rem; color: var(--oro); text-transform: uppercase; text-shadow: 0 0 15px var(--oro-glow); }
     </style>
 </head>
 <body>
-    <h1>BRADLYSTRONGHOLD</h1>
-    <p>La piattaforma multiplayer per i classici Stronghold</p>
-    <a href="https://github.com/STRANGERUM656/BRADLYSTRONGHOLD/releases/latest/download/BradlyStronghold-Setup.zip" class="btn" download>SCARICA GRATIS</a>
+    <header>
+        <div class="logo"><i class="fa-solid fa-shield-halved"></i><span>BRADLYSTRONGHOLD</span></div>
+        <nav><ul><li><a href="#">Features</a></li><li><a href="#">Lobby</a></li><li><a href="#">Come Iniziare</a></li><li><a href="https://github.com/STRANGERUM656/BRADLYSTRONGHOLD">Github</a></li></ul></nav>
+    </header>
+    <main class="hero">
+        <h1>BRADLYSTRONGHOLD</h1>
+        <p class="subtitle">La piattaforma multiplayer per i classici Stronghold</p>
+        <div class="badges"><span class="badge">Stronghold 1.1</span><span class="badge">Crusader 1.3</span><span class="badge">Crusader 1.4</span><span class="badge">Stronghold HD</span></div>
+        <div class="buttons">
+            <a href="https://github.com/STRANGERUM656/BRADLYSTRONGHOLD/releases/latest/download/BradlyStronghold.exe" class="btn btn-primary" download><i class="fa-solid fa-download"></i> SCARICA GRATIS <span>WINDOWS - ULTIMA VERSIONE</span></a>
+            <a href="#" class="btn"><i class="fa-solid fa-list"></i> VEDI LOBBY</a>
+        </div>
+    </main>
+    <section class="features-section"><h2>INTERFACCIA IN TEMPO REALE</h2><p>Vedi chi è online, crea lobby, chatta e avvia le partite</p></section>
 </body>
 </html>
