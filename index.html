@@ -1,0 +1,530 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta
+ charset="UTF-8" />
+<meta name="viewport" con
+tent="width=device-width, initial-scale=1.0" 
+/>
+<title>BradlyStronghold - Medieval Multipl
+ayer</title>
+<meta name="description" content
+="La piattaforma multiplayer per Stronghold 1
+.1, Crusader 1.3, Crusader 1.4 e HD." />
+<lin
+k rel="preconnect" href="https://fonts.google
+apis.com">
+<link rel="preconnect" href="https
+://fonts.gstatic.com" crossorigin>
+<link href
+="https://fonts.googleapis.com/css2?family=Ci
+nzel:wght@400;600;700;900&family=IM+Fell+Engl
+ish:ital@0;1&family=Inter:wght@300;400;500;60
+0;700&display=swap" rel="stylesheet">
+<link r
+el="stylesheet" href="style.css">
+</head>
+<bo
+dy>
+
+<div class="bg-layer">
+  <svg class="bg-
+svg" viewBox="0 0 1600 900" preserveAspectRat
+io="xMidYMid slice" xmlns="http://www.w3.org/
+2000/svg">
+    <defs>
+      <radialGradient i
+d="skyGrad" cx="50%" cy="35%" r="80%">
+      
+  <stop offset="0%" stop-color="#1a1410"/>
+  
+      <stop offset="50%" stop-color="#0a0806"
+/>
+        <stop offset="100%" stop-color="#0
+00000"/>
+      </radialGradient>
+      <radia
+lGradient id="moonGlow" cx="50%" cy="50%" r="
+50%">
+        <stop offset="0%" stop-color="#
+ffd88a" stop-opacity="0.9"/>
+        <stop of
+fset="35%" stop-color="#c49b4f" stop-opacity=
+"0.4"/>
+        <stop offset="100%" stop-colo
+r="#000000" stop-opacity="0"/>
+      </radial
+Gradient>
+      <linearGradient id="castleGra
+d" x1="0%" y1="0%" x2="0%" y2="100%">
+       
+ <stop offset="0%" stop-color="#1c1814"/>
+   
+     <stop offset="100%" stop-color="#050403"
+/>
+      </linearGradient>
+      <linearGradi
+ent id="warriorGrad" x1="0%" y1="0%" x2="0%" 
+y2="100%">
+        <stop offset="0%" stop-col
+or="#0d0b09"/>
+        <stop offset="100%" st
+op-color="#000000"/>
+      </linearGradient>
+
+      <linearGradient id="groundGrad" x1="0%"
+ y1="0%" x2="0%" y2="100%">
+        <stop off
+set="0%" stop-color="#0d0906"/>
+        <stop
+ offset="100%" stop-color="#000000"/>
+      <
+/linearGradient>
+      <filter id="softBlur">
+<feGaussianBlur stdDeviation="3"/></filter>
+ 
+     <filter id="glow">
+        <feGaussianBl
+ur stdDeviation="4" result="blur"/>
+        <
+feMerge><feMergeNode in="blur"/><feMergeNode 
+in="SourceGraphic"/></feMerge>
+      </filter
+>
+    </defs>
+    <rect width="1600" height="
+900" fill="url(#skyGrad)"/>
+    <circle cx="1
+180" cy="200" r="200" fill="url(#moonGlow)"/>
+
+    <circle cx="1180" cy="200" r="60" fill="
+#f5e3b0" opacity="0.95"/>
+    <g fill="#f5e3b
+0" opacity="0.7">
+      <circle cx="150" cy="
+80" r="1.4"/><circle cx="320" cy="140" r="1"/
+>
+      <circle cx="500" cy="60" r="1.6"/><ci
+rcle cx="680" cy="110" r="1"/>
+      <circle 
+cx="850" cy="70" r="1.3"/><circle cx="1020" c
+y="130" r="0.9"/>
+      <circle cx="1380" cy=
+"90" r="1.2"/><circle cx="1480" cy="200" r="1
+"/>
+    </g>
+    <ellipse cx="800" cy="720" r
+x="1000" ry="140" fill="#c49b4f" opacity="0.0
+5" filter="url(#softBlur)"/>
+    <g fill="url
+(#castleGrad)">
+      <path d="M0,730 Q300,65
+0 600,700 T1200,690 T1600,730 L1600,900 L0,90
+0 Z"/>
+      <path d="M690,470 L690,720 L910,
+720 L910,470 L890,470 L890,440 L870,440 L870,
+470 L850,470 L850,440 L830,440 L830,470 L810,
+470 L810,440 L790,440 L790,470 L770,470 L770,
+440 L750,440 L750,470 L730,470 L730,440 L710,
+440 L710,470 L690,470 Z"/>
+      <rect x="688
+" y="460" width="224" height="16"/>
+      <pa
+th d="M540,570 L540,720 L670,720 L670,570 L65
+0,570 L650,548 L628,548 L628,570 L606,570 L60
+6,548 L584,548 L584,570 L562,570 L562,548 L54
+0,548 Z"/>
+      <rect x="538" y="565" width=
+"134" height="12"/>
+      <path d="M930,570 L
+930,720 L1060,720 L1060,570 L1040,570 L1040,5
+48 L1018,548 L1018,570 L996,570 L996,548 L974
+,548 L974,570 L952,570 L952,548 L930,548 Z"/>
+
+      <rect x="928" y="565" width="134" heig
+ht="12"/>
+      <rect x="670" y="640" width="
+260" height="80"/>
+      <rect x="670" y="632
+" width="30" height="12"/><rect x="730" y="63
+2" width="30" height="12"/>
+      <rect x="79
+0" y="632" width="30" height="12"/><rect x="8
+50" y="632" width="30" height="12"/>
+      <r
+ect x="788" y="540" width="18" height="34" fi
+ll="#c49b4f" opacity="0.7"/>
+    </g>
+    <g 
+fill="url(#warriorGrad)" filter="url(#glow)">
+
+      <path d="M160,900 L180,740 Q192,690 21
+4,680 L256,680 Q278,690 290,740 L310,900 Z"/>
+
+      <ellipse cx="180" cy="795" rx="62" ry=
+"92" fill="#0a0705" stroke="#3a2a1a" stroke-w
+idth="3"/>
+      <path d="M310,740 L312,640 L
+314,740 Z" fill="#1a1510"/>
+    </g>
+    <g f
+ill="url(#warriorGrad)" filter="url(#glow)">
+
+      <path d="M1290,900 L1310,740 Q1322,690 
+1344,680 L1386,680 Q1408,690 1420,740 L1440,9
+00 Z"/>
+      <circle cx="1420" cy="795" r="6
+2" fill="#0a0705" stroke="#3a2a1a" stroke-wid
+th="3"/>
+      <line x1="1300" y1="900" x2="1
+300" y2="480" stroke="#1a1510" stroke-width="
+4"/>
+    </g>
+    <g fill="url(#warriorGrad)"
+ filter="url(#glow)">
+      <path d="M690,900
+ L722,710 Q738,645 772,635 L828,635 Q862,645 
+878,710 L910,900 Z"/>
+      <path d="M660,710
+ Q628,775 650,850 Q684,895 720,895 Q732,830 7
+20,760 Q700,710 660,710 Z" fill="#0a0705" str
+oke="#3a2a1a" stroke-width="4"/>
+      <path 
+d="M894,690 L903,520 L912,690 Z" fill="#1a151
+0"/>
+    </g>
+    <path d="M0,850 Q400,820 80
+0,840 T1600,850 L1600,900 L0,900 Z" fill="url
+(#groundGrad)"/>
+  </svg>
+  <div class="vigne
+tte"></div>
+</div>
+
+<nav class="nav">
+  <div 
+class="nav-brand">
+    <svg viewBox="0 0 100 
+120" class="nav-crest">
+      <defs><linearGr
+adient id="ng" x1="0" y1="0" x2="0" y2="1"><s
+top offset="0%" stop-color="#e8c86a"/><stop o
+ffset="100%" stop-color="#8a6b2a"/></linearGr
+adient></defs>
+      <path d="M50,5 L90,20 L9
+0,60 Q90,95 50,115 Q10,95 10,60 L10,20 Z" fil
+l="#1a1410" stroke="url(#ng)" stroke-width="3
+"/>
+      <path d="M50,42 L58,55 L50,68 L42,5
+5 Z" fill="url(#ng)"/>
+    </svg>
+    <span>B
+radlyStronghold</span>
+  </div>
+  <ul class="
+nav-links">
+    <li><a href="#preview">LOBBY<
+/a></li>
+    <li><a href="#features">CARATTER
+ISTICHE</a></li>
+    <li><a href="#how">COME 
+INIZIARE</a></li>
+    <li><a href="https://gi
+thub.com/STRANGERUM656/BRADLYSTRONGHOLD" targ
+et="_blank">GITHUB</a></li>
+  </ul>
+</nav>
+
+<
+header class="hero">
+  <h1 class="title">Brad
+lyStronghold</h1>
+  <p class="subtitle">La pi
+attaforma multiplayer per i classici Strongho
+ld</p>
+  <div class="games-row">
+    <span cl
+ass="game-chip">Stronghold 1.1</span>
+    <sp
+an class="game-chip">Crusader 1.3</span>
+    
+<span class="game-chip">Crusader 1.4</span>
+ 
+   <span class="game-chip">Stronghold HD</spa
+n>
+  </div>
+  <div class="hero-cta">
+    <a i
+d="downloadBtn" class="btn-primary" href="htt
+ps://github.com/STRANGERUM656/BRADLYSTRONGHOL
+D/releases/latest" target="_blank" rel="noope
+ner">
+      <span class="btn-main">SCARICA OR
+A</span>
+      <span class="btn-sub" id="vers
+ionLabel">Versione in caricamento...</span>
+ 
+   </a>
+<a class="btn-zip" href="https://github.com/STRANGERUM656/BRADLYSTRONGHOLD/releases/latest/download/" target="_blank" rel="noopener" style="display: inline-flex; flex-direction: column; align-items: center; gap: 4px; padding: 20px 44px; background: linear-gradient(180deg, #2a3a1a 0%, #141a10 50%, #070a05 100%); border: 2px solid #4ade80; border-radius: 6px; color: #d8ffd8; text-decoration: none; font-family: 'Cinzel', serif; font-weight: 700; box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 50px rgba(74, 222, 128, 0.25); min-width: 280px; transition: all 0.3s;">
+  <span style="font-size: 22px; letter-spacing: 0.15em; color: #4ade80; text-shadow: 0 0 15px rgba(74, 222, 128, 0.6);">DEFINITIVE PACK</span>
+  <span style="font-size: 11px; letter-spacing: 0.15em; color: #a8d8a8; opacity: 0.85;">Download ZIP (0 MB)</span>
+</a>
+<a class="btn-ghost" href="#previ
+ew"><span>GUARDA LA LOBBY</span></a>
+  </div>
+
+  <div class="meta-row">
+    <span id="fileS
+ize">Dimensione: calcolo...</span>
+    <span 
+id="releaseDate">Data: calcolo...</span>
+    
+<span id="downloadCount">Download: calcolo...
+</span>
+  </div>
+</header>
+
+<section id="prev
+iew" class="preview-section">
+  <div class="s
+ection-header">
+    <h2>Interfaccia in Tempo 
+Reale</h2>
+    <p>Vedi chi e' online, crea lo
+bby, chatta e avvia le partite</p>
+  </div>
+ 
+ <div class="gameranger-ui">
+    <aside class
+="gr-sidebar-left">
+      <div class="gr-side
+bar-title">GIOCHI SUPPORTATI</div>
+      <ul 
+class="gr-games-list">
+        <li class="gr-
+game-item active"><span class="gr-game-dot"><
+/span><span class="gr-game-name">Stronghold 1
+.1</span><span class="gr-game-count">3</span>
+</li>
+        <li class="gr-game-item"><span 
+class="gr-game-dot"></span><span class="gr-ga
+me-name">Crusader 1.3</span><span class="gr-g
+ame-count">5</span></li>
+        <li class="g
+r-game-item"><span class="gr-game-dot"></span
+><span class="gr-game-name">Crusader 1.4</spa
+n><span class="gr-game-count">2</span></li>
+ 
+       <li class="gr-game-item"><span class="
+gr-game-dot"></span><span class="gr-game-name
+">Stronghold HD</span><span class="gr-game-co
+unt">4</span></li>
+      </ul>
+      <div cla
+ss="gr-sidebar-title" style="margin-top:24px"
+>AMICI ONLINE</div>
+      <ul class="gr-frien
+ds-list">
+        <li class="gr-friend"><span
+ class="gr-status online"></span><span class=
+"gr-avatar">K</span><span class="gr-friend-na
+me">KingArthur</span></li>
+        <li class=
+"gr-friend"><span class="gr-status online"></
+span><span class="gr-avatar">R</span><span cl
+ass="gr-friend-name">Richard_III</span></li>
+
+        <li class="gr-friend"><span class="gr
+-status ingame"></span><span class="gr-avatar
+">L</span><span class="gr-friend-name">Lionhe
+art</span></li>
+        <li class="gr-friend"
+><span class="gr-status online"></span><span 
+class="gr-avatar">S</span><span class="gr-fri
+end-name">Saladin</span></li>
+      </ul>
+   
+ </aside>
+    <div class="gr-main">
+      <di
+v class="gr-toolbar">
+        <div class="gr-
+toolbar-tabs">
+          <button class="gr-ta
+b active">LOBBY ATTIVE</button>
+          <bu
+tton class="gr-tab">GIOCATORI ONLINE</button>
+
+        </div>
+        <div class="gr-toolba
+r-actions">
+          <button class="gr-btn-s
+mall" id="refreshBtn">AGGIORNA</button>
+     
+     <button class="gr-btn-primary-small" id=
+"createBtn">CREA LOBBY</button>
+        </div
+>
+      </div>
+      <div class="gr-lobby-lis
+t" id="lobbyList"></div>
+    </div>
+    <asid
+e class="gr-sidebar-right">
+      <div class=
+"gr-chat-header">
+        <span class="gr-cha
+t-title">CHAT GLOBALE</span>
+        <span cl
+ass="gr-online-badge">18 ONLINE</span>
+      
+</div>
+      <div class="gr-chat-messages" id
+="chatMessages"></div>
+      <div class="gr-c
+hat-input-wrap">
+        <input type="text" c
+lass="gr-chat-input" id="chatInput" placehold
+er="Scrivi un messaggio..." />
+        <butto
+n class="gr-chat-send" id="chatSend">INVIA</b
+utton>
+      </div>
+    </aside>
+  </div>
+  <
+p class="preview-note"><strong>Anteprima inte
+rattiva</strong> - Prova a cliccare una lobby
+ o scrivere in chat.</p>
+</section>
+
+<section
+ id="features" class="features-section">
+  <d
+iv class="section-header">
+    <h2>Perche' Br
+adlyStronghold</h2>
+    <p>Tutto quello che s
+erve per giocare online con gli amici</p>
+  <
+/div>
+  <div class="features-grid">
+    <div 
+class="feature-card"><div class="feature-icon
+-text">01</div><h3>UN CLICK, SI GIOCA</h3><p>
+Seleziona la tua versione di Stronghold e pre
+mi Avvia. Il gioco parte su tutti i PC della 
+lobby.</p></div>
+    <div class="feature-card
+"><div class="feature-icon-text">02</div><h3>
+SISTEMA AMICI</h3><p>Aggiungi amici, vedi chi
+ e' online e invitali direttamente nelle tue 
+lobby.</p></div>
+    <div class="feature-card
+"><div class="feature-icon-text">03</div><h3>
+CHAT LIVE</h3><p>Chatta nella lobby o nella c
+hat globale. Invia messaggi in tempo reale a 
+tutti i giocatori.</p></div>
+    <div class="
+feature-card"><div class="feature-icon-text">
+04</div><h3>FILE BROWSER</h3><p>Naviga tutte 
+le cartelle del PC per selezionare Stronghold
+.exe in pochi click.</p></div>
+    <div class
+="feature-card"><div class="feature-icon-text
+">05</div><h3>EFFETTI SONORI</h3><p>7 suoni d
+iversi per click, join, messaggi, amici e avv
+io partita.</p></div>
+    <div class="feature
+-card"><div class="feature-icon-text">06</div
+><h3>OPEN SOURCE</h3><p>Codice sorgente dispo
+nibile su GitHub. Contribuisci, segnala bug o
+ proponi nuove feature.</p></div>
+  </div>
+</
+section>
+
+<section id="how" class="how-sectio
+n">
+  <div class="section-header">
+    <h2>Co
+me Iniziare</h2>
+    <p>Da zero a giocare in 
+4 passi</p>
+  </div>
+  <ol class="steps-list"
+>
+    <li class="step"><div class="step-numbe
+r">1</div><div class="step-content"><h3>SCARI
+CA L'APP</h3><p>Clicca su <strong>SCARICA ORA
+</strong> e installa <strong>BradlyStronghold
+-Setup.exe</strong> sul tuo PC Windows.</p></
+div></li>
+    <li class="step"><div class="st
+ep-number">2</div><div class="step-content"><
+h3>INSTALLA RADMIN VPN</h3><p>Scarica <strong
+>Radmin VPN</strong> da <a href="https://www.
+radmin-vpn.com/" target="_blank">radmin-vpn.c
+om</a> e connettiti alla rete dell'host.</p><
+/div></li>
+    <li class="step"><div class="s
+tep-number">3</div><div class="step-content">
+<h3>REGISTRATI</h3><p>Apri l'app, crea il tuo
+ account con username e password e accedi.</p
+></div></li>
+    <li class="step"><div class=
+"step-number">4</div><div class="step-content
+"><h3>GIOCA</h3><p>Crea una lobby, scegli il 
+gioco e premi <strong>Avvia Partita</strong>.
+ Il gioco partira' su tutti i PC.</p></div></
+li>
+  </ol>
+  <div class="final-cta">
+    <a 
+class="btn-primary big" href="https://github.
+com/STRANGERUM656/BRADLYSTRONGHOLD/releases/l
+atest" target="_blank">
+      <span class="bt
+n-main">SCARICA ORA</span>
+      <span class=
+"btn-sub">Ultima versione disponibile</span>
+
+    </a>
+  </div>
+</section>
+
+<footer class="
+footer">
+  <div class="footer-content">
+    <
+div class="footer-brand">
+      <span class="
+footer-name">BradlyStronghold</span>
+      <s
+pan class="footer-tag">La piattaforma multipl
+ayer per Stronghold</span>
+    </div>
+    <di
+v class="footer-links">
+      <a href="https:
+//github.com/STRANGERUM656/BRADLYSTRONGHOLD" 
+target="_blank">GITHUB</a>
+      <a href="htt
+ps://github.com/STRANGERUM656/BRADLYSTRONGHOL
+D/releases" target="_blank">DOWNLOAD</a>
+    
+  <a href="https://www.radmin-vpn.com/" targe
+t="_blank">RADMIN VPN</a>
+    </div>
+    <div
+ class="footer-copy">Forgiato da STRANGERUM65
+6 - MMXXVI</div>
+  </div>
+</footer>
+
+<script 
+src="script.js"></script>
+</body>
+</html>
+
+
