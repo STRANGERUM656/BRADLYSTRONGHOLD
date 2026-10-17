@@ -4,160 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BradlyStronghold - Piattaforma Multiplayer</title>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@500;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            background-color: #0d0d0d; color: #fff; font-family: 'Montserrat', sans-serif; 
-            background-image: linear-gradient(to bottom, rgba(13,13,13,0.8) 0%, rgba(13,13,13,1) 100%), url('https://images.unsplash.com/photo-1533152760838-57372754d793?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); 
-            background-size: cover; background-position: center top; background-attachment: fixed; 
-            min-height: 100vh; overflow-x: hidden; 
-        }
+        body { background-color: #0d0d0d; color: #fff; font-family: 'Montserrat', sans-serif; background-image: linear-gradient(to bottom, rgba(13,13,13,0.8) 0%, rgba(13,13,13,1) 100%), url('https://images.unsplash.com/photo-1533152760838-57372754d793?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center top; background-attachment: fixed; min-height: 100vh; overflow-x: hidden; }
         :root { --oro: #e6c27a; --oro-scuro: #b8934a; --oro-glow: rgba(230, 194, 122, 0.4); }
-
-        header { 
-            display: flex; justify-content: space-between; align-items: center; 
-            padding: 20px 50px; border-bottom: 1px solid rgba(230, 194, 122, 0.2); 
-            background: rgba(13, 13, 13, 0.9); backdrop-filter: blur(10px); 
-            position: fixed; width: 100%; top: 0; z-index: 100; 
-        }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; border-bottom: 1px solid rgba(230, 194, 122, 0.2); background: rgba(13, 13, 13, 0.9); backdrop-filter: blur(10px); position: fixed; width: 100%; top: 0; z-index: 100; }
         .logo { display: flex; align-items: center; gap: 10px; font-family: 'Cinzel', serif; font-size: 1.2rem; color: var(--oro); }
         nav ul { list-style: none; display: flex; gap: 30px; }
         nav a { text-decoration: none; color: #a0a0a0; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; transition: color 0.3s; }
         nav a:hover { color: var(--oro); }
-
         .hero { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 150px 20px 40px; }
         .hero h1 { font-family: 'Cinzel', serif; font-size: 4.5rem; color: var(--oro); text-transform: uppercase; letter-spacing: 5px; text-shadow: 0 0 20px var(--oro-glow); }
         .subtitle { font-family: 'Playfair Display', serif; font-style: italic; color: var(--oro); font-size: 1.3rem; margin-bottom: 30px; }
-        
-        .btn-primary { 
-            display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
-            padding: 15px 50px; text-decoration: none; border-radius: 5px; 
-            border: 1px solid var(--oro-scuro); background: rgba(20, 20, 20, 0.9); 
-            color: var(--oro); cursor: pointer; transition: 0.3s; font-size: 1.2rem; font-weight: 700; letter-spacing: 2px;
-        }
+        .btn-primary { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; padding: 15px 50px; text-decoration: none; border-radius: 5px; border: 1px solid var(--oro-scuro); background: rgba(20, 20, 20, 0.9); color: var(--oro); cursor: pointer; transition: 0.3s; font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; }
         .btn-primary:hover { box-shadow: 0 0 20px var(--oro-glow); border-color: var(--oro); background: rgba(30,30,30,1); }
         .btn-primary span { font-size: 0.65rem; color: #a0a0a0; margin-top: 8px; font-weight: 500; }
-
         .lobby-section { padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
         .lobby-header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid rgba(230, 194, 122, 0.3); padding-bottom: 15px; margin-bottom: 30px; }
         .lobby-header h2 { font-family: 'Cinzel', serif; font-size: 2.5rem; color: var(--oro); text-transform: uppercase; }
         .server-status { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: #a0a0a0; }
         .status-dot { width: 12px; height: 12px; background-color: #4caf50; border-radius: 50%; box-shadow: 0 0 10px #4caf50; animation: pulse 2s infinite; }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
-        }
-
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); } 100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); } }
         .lobby-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-        
-        .lobby-card {
-            background: rgba(20, 20, 20, 0.85); border: 1px solid rgba(230, 194, 122, 0.2);
-            border-radius: 8px; padding: 20px; transition: 0.3s ease;
-            backdrop-filter: blur(5px); position: relative; overflow: hidden;
-        }
+        .lobby-card { background: rgba(20, 20, 20, 0.85); border: 1px solid rgba(230, 194, 122, 0.2); border-radius: 8px; padding: 20px; transition: 0.3s ease; backdrop-filter: blur(5px); position: relative; overflow: hidden; }
         .lobby-card:hover { border-color: var(--oro); transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
-        
         .lobby-game { font-family: 'Cinzel', serif; font-size: 1.2rem; color: var(--oro); margin-bottom: 5px; }
         .lobby-host { font-size: 0.8rem; color: #a0a0a0; margin-bottom: 15px; }
-        
         .lobby-details { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; font-size: 0.9rem; }
         .players { color: #fff; }
         .ping { color: #4caf50; font-weight: bold; }
-        
-        .btn-join {
-            display: block; width: 100%; text-align: center; padding: 10px; 
-            background: rgba(230, 194, 122, 0.1); border: 1px solid var(--oro-scuro);
-            color: var(--oro); text-decoration: none; border-radius: 4px; font-weight: bold;
-            transition: 0.3s;
-        }
+        .btn-join { display: block; width: 100%; text-align: center; padding: 10px; background: rgba(230, 194, 122, 0.1); border: 1px solid var(--oro-scuro); color: var(--oro); text-decoration: none; border-radius: 4px; font-weight: bold; transition: 0.3s; }
         .btn-join:hover { background: var(--oro); color: #000; }
-
         footer { text-align: center; padding: 40px 20px; border-top: 1px solid rgba(230, 194, 122, 0.1); margin-top: 50px; color: #666; font-size: 0.85rem; }
-
-        @media (max-width: 768px) {
-            header { flex-direction: column; padding: 15px; gap: 15px; }
-            nav ul { gap: 15px; flex-wrap: wrap; justify-content: center; }
-            .hero h1 { font-size: 2.8rem; }
-            .hero { padding-top: 180px; }
-            .lobby-header { flex-direction: column; align-items: flex-start; gap: 10px; }
-        }
+        @media (max-width: 768px) { header { flex-direction: column; padding: 15px; gap: 15px; } nav ul { gap: 15px; flex-wrap: wrap; justify-content: center; } .hero h1 { font-size: 2.8rem; } .hero { padding-top: 180px; } .lobby-header { flex-direction: column; align-items: flex-start; gap: 10px; } }
     </style>
 </head>
 <body>
-
     <header>
         <div class="logo"><i class="fa-solid fa-shield-halved"></i><span>BRADLYSTRONGHOLD</span></div>
-        <nav>
-            <ul>
-                <li><a href="#lobby">Lobby</a></li>
-                <li><a href="#">Come Iniziare</a></li>
-                <li><a href="https://github.com/STRANGERUM656/BRADLYSTRONGHOLD" target="_blank">Github</a></li>
-            </ul>
-        </nav>
+        <nav><ul><li><a href="#lobby">Lobby</a></li><li><a href="#">Come Iniziare</a></li><li><a href="https://github.com/STRANGERUM656/BRADLYSTRONGHOLD" target="_blank">Github</a></li></ul></nav>
     </header>
-
     <main class="hero">
         <h1>BRADLYSTRONGHOLD</h1>
         <p class="subtitle">La piattaforma multiplayer per i classici Stronghold</p>
-        
-        <!-- PULSANTE DOWNLOAD ZIP -->
-        <a href="https://github.com/STRANGERUM656/BRADLYSTRONGHOLD/releases/latest/download/BradlyStronghold.zip" class="btn-primary" download>
-            <i class="fa-solid fa-download"></i> SCARICA GRATIS
-            <span>WINDOWS - PACCHETTO COMPLETO (.ZIP)</span>
-        </a>
+        <a href="https://github.com/STRANGERUM656/BRADLYSTRONGHOLD/releases/latest/download/BradlyStronghold.zip" class="btn-primary" download><i class="fa-solid fa-download"></i> SCARICA GRATIS <span>WINDOWS - PACCHETTO COMPLETO (.ZIP)</span></a>
     </main>
-
     <section id="lobby" class="lobby-section">
         <div class="lobby-header">
             <h2>Lobby in Tempo Reale</h2>
-            <div class="server-status">
-                <div class="status-dot"></div> Server Online • 12 Giocatori connessi
-            </div>
+            <div class="server-status"><div class="status-dot"></div> Server Online • 12 Giocatori connessi</div>
         </div>
-
         <div class="lobby-grid">
             <div class="lobby-card">
                 <div class="lobby-game">Crusader 1.4 - 1v1</div>
                 <div class="lobby-host">Host: ReArtù_99</div>
-                <div class="lobby-details">
-                    <span class="players"><i class="fa-solid fa-user"></i> 1/2</span>
-                    <span class="ping"><i class="fa-solid fa-wifi"></i> 24ms</span>
-                </div>
-                <a href="#" class="btn-join" onclick="alert('Scarica l\'app per unirti alla partita!')">UNISCITI</a>
+                <div class="lobby-details"><span class="players"><i class="fa-solid fa-user"></i> 1/2</span><span class="ping"><i class="fa-solid fa-wifi"></i> 24ms</span></div>
+                <a href="#" class="btn-join" onclick="alert('Scarica l\'app per unirti!')">UNISCITI</a>
             </div>
-
             <div class="lobby-card">
                 <div class="lobby-game">Stronghold HD - 4 Player FFA</div>
                 <div class="lobby-host">Host: Saladin</div>
-                <div class="lobby-details">
-                    <span class="players"><i class="fa-solid fa-users"></i> 3/4</span>
-                    <span class="ping"><i class="fa-solid fa-wifi"></i> 45ms</span>
-                </div>
-                <a href="#" class="btn-join" onclick="alert('Scarica l\'app per unirti alla partita!')">UNISCITI</a>
-            </div>
-
-            <div class="lobby-card">
-                <div class="lobby-game">Crusader 1.3 - Co-op VS AI</div>
-                <div class="lobby-host">Host: Wolf</div>
-                <div class="lobby-details">
-                    <span class="players"><i class="fa-solid fa-users"></i> 2/3</span>
-                    <span class="ping"><i class="fa-solid fa-wifi"></i> 18ms</span>
-                </div>
-                <a href="#" class="btn-join" onclick="alert('Scarica l\'app per unirti alla partita!')">UNISCITI</a>
+                <div class="lobby-details"><span class="players"><i class="fa-solid fa-users"></i> 3/4</span><span class="ping"><i class="fa-solid fa-wifi"></i> 45ms</span></div>
+                <a href="#" class="btn-join" onclick="alert('Scarica l\'app per unirti!')">UNISCITI</a>
             </div>
         </div>
     </section>
-
-    <footer>
-        <p>© 2026 BradlyStronghold. Un progetto fan-made non commerciale.</p>
-    </footer>
+    <footer><p>© 2026 BradlyStronghold. Un progetto fan-made non commerciale.</p></footer>
 </body>
 </html>
